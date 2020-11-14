@@ -23,7 +23,9 @@ jobs:
       - uses: docker-practice/actions-setup-docker@master
 
       - name: Clone
-        run: git clone https://github.com/aoirint/room-system-frontend.git .
+        run: |
+          git clone https://github.com/aoirint/room-system-frontend.git ./room-system-frontend
+          cd ./room-system-frontend
 
       - name: Build Docker Image
         run: docker build . -t aoirint/room-system-frontend
