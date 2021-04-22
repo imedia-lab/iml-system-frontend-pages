@@ -26,6 +26,11 @@ jobs:
         run: |
           git clone https://github.com/aoirint/room-system-frontend.git ./room-system-frontend
 
+      - name: Checkout
+        run: |
+          cd ./room-system-frontend
+          git checkout fc13c7c6947377fca941a8815e1aa5d544426de1
+
       - name: Build Docker Image
         run: docker build ./room-system-frontend -t aoirint/room-system-frontend
 
