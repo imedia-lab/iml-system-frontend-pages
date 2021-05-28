@@ -29,7 +29,7 @@ jobs:
       - name: Checkout
         run: |
           cd ./room-system-frontend
-          git checkout 9de0686be1e66e934cec1f3fbb4ec369d228b093
+          git checkout aff5849dec1e33965962630ee1649db8df2cc5f8
 
       - name: Build Docker Image
         run: docker build ./room-system-frontend -t aoirint/room-system-frontend
