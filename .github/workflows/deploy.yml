@@ -37,6 +37,7 @@ jobs:
       - name: Build Node.js Website
         run: |
           docker run --rm \
+            -u node
             -e REACT_APP_API_KEY \
             -e REACT_APP_AUTH_DOMAIN \
             -e REACT_APP_DATABASE_URL \
