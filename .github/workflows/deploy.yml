@@ -36,10 +36,8 @@ jobs:
 
       - name: Build Node.js Website
         run: |
-          mkdir -p "$PWD/room-system-frontend/build"
-          chown -R 1000:1000 "$PWD/room-system-frontend/build"
           docker run --rm \
-            -u node \
+            -u root \
             -e REACT_APP_API_KEY \
             -e REACT_APP_AUTH_DOMAIN \
             -e REACT_APP_DATABASE_URL \
